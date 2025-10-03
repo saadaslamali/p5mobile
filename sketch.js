@@ -80,15 +80,7 @@ function draw()
     else 
     {
         // Instructions to enable sensors
-        fill(50, 50, 50);  // Dark text
-        textAlign(CENTER, CENTER);
-        textSize(28);
-        fill(150, 50, 50);  // Red text
-        text("Motion Sensors Disabled", width/2, height/2 - 40);
-        
-        textSize(20);
-        fill(100, 100, 100);
-        text("Tap the screen to enable\\nmotion sensors", width/2, height/2 + 20);
+
     }
 }
 
