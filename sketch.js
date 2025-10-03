@@ -76,6 +76,7 @@ function draw()
         // Learn more: https://p5js.org/reference/p5/constrain/
 
         image(imgGif, rotationX, rotationY);
+        imgGif.resize(30, 80)
     } 
     else 
     {
