@@ -16,15 +16,20 @@
 let orientationX = 0;  // Rotation around X axis (front/back tilt)
 let orientationY = 0;  // Rotation around Y axis (left/right tilt)
 let orientationZ = 0;  // Rotation around Z axis (device rotation)
-
+let imgGif;
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
+
+function preload(){
+        loadImage("gifa.gif");
+
+}
 function setup() 
 {
     // Create a canvas that fills the entire screen
     createCanvas(windowWidth, windowHeight);
-
+  
     // Set to show in Degrees
     angleMode(DEGREES);
     
@@ -70,25 +75,7 @@ function draw()
         // Useful for mapping sensor values to specific ranges for animations or controls
         // Learn more: https://p5js.org/reference/p5/constrain/
 
-        debug('angles',orientationX,orientationY,orientationZ);
-        
-        // Display orientation values
-        fill(50, 50, 50);  // Dark text
-        textAlign(CENTER, CENTER);
-        
-        // Show current orientation values
-        textSize(24);
-        text("Device Orientation", width/2, height/2 - 100);
-        
-        textSize(20);
-        text("X (Tilt Forward/Back): " + orientationX.toFixed(1) + "°", width/2, height/2 - 40);
-        text("Y (Tilt Left/Right): " + orientationY.toFixed(1) + "°", width/2, height/2);
-        text("Z (Rotation): " + orientationZ.toFixed(1) + "°", width/2, height/2 + 40);
-        
-        // Instructions
-        textSize(16);
-        fill(100, 100, 100);
-        text("Tilt and rotate your device!", width/2, height/2 + 100);
+        image(imgGif, rotationX, rotationY);
     } 
     else 
     {
