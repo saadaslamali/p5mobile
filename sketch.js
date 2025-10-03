@@ -22,7 +22,7 @@ let imgGif;
 // ==============================================
 
 function preload(){
-        loadImage("gifa.gif");
+       imgGif = loadImage("gifa.gif");
 
 }
 function setup() 
