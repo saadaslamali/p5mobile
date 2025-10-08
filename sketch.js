@@ -128,7 +128,7 @@ function draw()
     }
   }
   else {
-        angle += 4; // degrees per frame
+        gifRot += 4; // degrees per frame
 
   }
 
