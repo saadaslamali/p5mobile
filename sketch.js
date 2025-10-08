@@ -70,7 +70,8 @@ function draw()
         orientationX = rotationX;
         orientationY = rotationY;
         // orientationZ = rotationZ;
-
+        let lX = rotationX;
+        let lY = rotationY;
         locationX += orientationX;
         locationY += orientationY;
         
