@@ -104,6 +104,7 @@ function draw()
     }
 
         imageMode(CENTER);
+          imgGif.resize(80, 80);
         image(imgGif, orientationX, orientationY);
     } 
     else 
