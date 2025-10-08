@@ -125,7 +125,7 @@ function draw()
     
 
         imageMode(CENTER);
-        blendMode(currentBlendMode);
+        blendMode(BLEND);
 
         image(imgGif, posX, posY, 75, 75);
     
