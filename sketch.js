@@ -26,12 +26,9 @@ let velX = 0;
 let velY = 0;
 let paused = false;
 
-let blendModesList = [
-  BLEND, ADD, DARKEST, LIGHTEST, DIFFERENCE,
-  MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY
-];
+let blendModesList;
 
-let currentBlendMode = BLEND;
+let currentBlendMode;
 
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
@@ -64,6 +61,10 @@ function setup()
     posX = width / 2;
     posY = height / 2;
       background(0, 0, 0);
+      blendModesList =  [
+  BLEND, ADD, DARKEST, LIGHTEST, DIFFERENCE,
+  MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY
+];
         currentBlendMode = random(blendModesList); // choose initial blend mode
 
 
