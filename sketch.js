@@ -26,6 +26,13 @@ let velX = 0;
 let velY = 0;
 let paused = false;
 
+let blendModesList = [
+  BLEND, ADD, DARKEST, LIGHTEST, DIFFERENCE,
+  MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY
+];
+
+let currentBlendMode;
+
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
@@ -57,6 +64,8 @@ function setup()
     posX = width / 2;
     posY = height / 2;
       background(0, 0, 0);
+        currentBlendMode = random(blendModesList); // choose initial blend mode
+
 
 
     
@@ -116,7 +125,7 @@ function draw()
     
 
         imageMode(CENTER);
-        blendMode(DIFFERENCE);
+        blendMode(currentBlendMode);
 
         image(imgGif, posX, posY, 75, 75);
     
@@ -132,6 +141,8 @@ function touchStarted()
 {
   paused = !paused;
   return false; 
+    currentBlendMode = random(blendModesList);
+
 
 }
 
