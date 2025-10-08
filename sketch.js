@@ -116,7 +116,7 @@ function draw()
     
 
         imageMode(CENTER);
-        blendMode(HARD_LIGHT);
+        blendMode(DIFFERENCE);
 
         image(imgGif, posX, posY, 75, 75);
     
@@ -131,7 +131,6 @@ function draw()
 function touchStarted() 
 {
   paused = !paused;
-  if (paused) saveCanvas('myTiltCanvas', 'png');
   return false; 
 
 }
