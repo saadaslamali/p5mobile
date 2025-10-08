@@ -55,7 +55,7 @@ function draw()
     // Check if sensors are working
     if (window.sensorsEnabled) 
     {
-        background(200, 255, 200);  // Light green when sensors active
+        // background(200, 255, 200);  // Light green when sensors active
 
         // Update orientation values from device sensors ONLY when enabled
         orientationX = rotationX;
