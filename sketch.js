@@ -111,6 +111,9 @@ function draw()
     } 
     else 
     {
+           background(255, 200, 200);
+    textAlign(CENTER, CENTER);
+    text("Tap to enable motion sensors", width / 2, height / 2);
         // Instructions to enable sensors
 
     }
