@@ -25,10 +25,15 @@ let posY = 0;
 let velX = 0;
 let velY = 0;
 let paused = false;
+let gifRot = 0; // rotation of the GIF
+
 
 let blendModesList;
 
 let currentBlendMode;
+
+let selected = false; 
+
 
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
@@ -124,10 +129,13 @@ function draw()
 
     
 
-        imageMode(CENTER);
-        blendMode(BLEND);
-
-        image(imgGif, posX, posY, 75, 75);
+  push();
+  translate(posX, posY);
+  rotate(gifRot);
+  imageMode(CENTER);
+  blendMode(BLEND);
+  image(imgGif, 0, 0, 70, 70);
+  pop();
     
 
 }
@@ -140,7 +148,7 @@ function draw()
 function touchStarted() 
 {
   paused = true;
-  currentBlendMode = random(blendModesList);
+  gifRot += 2;   
   return false; 
 
 
