@@ -93,6 +93,9 @@ function draw()
     return;
   }
 
+    if (touchIsDown) {
+    angle += 4; // degrees per frame
+  }
     if (!paused) {
     // physics
     
@@ -148,7 +151,6 @@ function draw()
 function touchStarted() 
 {
   paused = true;
-  gifRot += 2;   
   return false; 
 
 
