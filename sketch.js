@@ -54,7 +54,7 @@ function setup()
     textSize(32);
     posX = width / 2;
     posY = height / 2;
-      imgGif.resize(100, 100);
+          blendMode(HARD_LIGHT);
       background(0, 0, 0);
 
 
@@ -105,12 +105,11 @@ function draw()
     }
 
         imageMode(CENTER);
-          blendMode(HARD_LIGHT);
-        image(imgGif, posX, posY);
+        image(imgGif, posX, posY, 75, 75);
     } 
     else 
     {
-           background(255, 200, 200);
+           background(0, 0, 0);
     textAlign(CENTER, CENTER);
     text("Tap to enable motion sensors", width / 2, height / 2);
 
