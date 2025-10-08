@@ -55,6 +55,8 @@ function setup()
     posX = width / 2;
     posY = height / 2;
       imgGif.resize(100, 100);
+      background(0, 0, 0);
+
 
     
 
@@ -68,7 +70,6 @@ function draw()
     // Clear the screen
     // background(240, 240, 240);
     
-background(0, 0, 0);
     
     // Check if sensors are working
     if (window.sensorsEnabled) 
@@ -104,7 +105,6 @@ background(0, 0, 0);
     }
 
         imageMode(CENTER);
-          imgGif.resize(80, 160);
         image(imgGif, posX, posY);
     } 
     else 
