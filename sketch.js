@@ -52,6 +52,8 @@ function setup()
     // Set text properties
     textAlign(CENTER, CENTER);
     textSize(32);
+    posX = width / 2;
+    posY = height / 2;
     
 
 }
