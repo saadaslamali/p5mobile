@@ -100,7 +100,7 @@ function draw()
       velY *= -0.8;
       posY = constrain(posY, 0, windowHeight);
     }
-        image(imgGif, posX, posY);
+        image(imgGif, orientationX, orientationY);
     } 
     else 
     {
