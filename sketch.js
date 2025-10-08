@@ -29,7 +29,7 @@ let velY = 0;
 // ==============================================
 
 function preload(){
-       imgGif = loadImage("gifa.gif");
+       imgGif = loadImage("gifb.gif");
 
 }
 function setup() 
@@ -54,7 +54,7 @@ function setup()
     textSize(32);
     posX = width / 2;
     posY = height / 2;
-      imgGif.resize(80, 80);
+      imgGif.resize(100, 100);
 
     
 
@@ -66,14 +66,14 @@ function setup()
 function draw() 
 {
     // Clear the screen
-    background(240, 240, 240);
+    // background(240, 240, 240);
     
-
+background(0, 0, 0);
     
     // Check if sensors are working
     if (window.sensorsEnabled) 
     {
-        background(200, 255, 200);  // Light green when sensors active
+          // Light green when sensors active
         
        orientationX = rotationX; // front/back
     orientationY = rotationY; // left/right
