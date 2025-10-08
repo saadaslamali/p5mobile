@@ -83,7 +83,7 @@ function draw()
         image(imgGif, orientationX, orientationY);
         imgGif.resize(30, 80)
     } 
-    else l
+    else 
     {
         // Instructions to enable sensors
 
