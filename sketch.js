@@ -52,8 +52,8 @@ function setup()
     // Set text properties
     textAlign(CENTER, CENTER);
     textSize(32);
-    posX = width / 2;
-    posY = height / 2;
+    posX = windowWidth / 2;
+    posY = windowHeight / 2;
     
 
 }
@@ -92,16 +92,15 @@ function draw()
     posY += velY;
 
     // Bounce at edges
-    if (posX < 0 || posX > width) {
+    if (posX < 0 || posX > windowWidth) {
       velX *= -0.8;
-      posX = constrain(posX, 0, width);
+      posX = constrain(posX, 0, windowWidth);
     }
-    if (posY < 0 || posY > height) {
+    if (posY < 0 || posY > windowHeight) {
       velY *= -0.8;
-      posY = constrain(posY, 0, height);
+      posY = constrain(posY, 0, windowHeight);
     }
         image(imgGif, posX, posY);
-        imgGif.resize(30, 80)
     } 
     else 
     {
