@@ -24,6 +24,8 @@ let posX = 0;
 let posY = 0;
 let velX = 0;
 let velY = 0;
+let paused = false;
+
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
