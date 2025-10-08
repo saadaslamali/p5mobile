@@ -31,7 +31,7 @@ let blendModesList = [
   MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY
 ];
 
-let currentBlendMode;
+let currentBlendMode = BLEND;
 
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
