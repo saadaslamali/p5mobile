@@ -24,17 +24,6 @@ let posX = 0;
 let posY = 0;
 let velX = 0;
 let velY = 0;
-
-let paused = false;
-
-function touchStarted() {
-  paused = !paused;             // toggle pause/resume
-  if (paused) {
-    saveCanvas('myTiltCanvas', 'png'); // save when paused
-  }
-  return false; // prevent scrolling
-
-}
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
@@ -65,7 +54,6 @@ function setup()
     textSize(32);
     posX = width / 2;
     posY = height / 2;
-          blendMode(HARD_LIGHT);
       background(0, 0, 0);
 
 
@@ -81,11 +69,17 @@ function draw()
     // Clear the screen
     // background(240, 240, 240);
     
-      if (!window.sensorsEnabled) return;
-
+    
     // Check if sensors are working
-    if (!paused) 
-    {
+  if (!window.sensorsEnabled) {
+    textAlign(CENTER, CENTER);
+    text("Tap to enable motion sensors", width / 2, height / 2);
+    return;
+  }
+
+    if (!paused) {
+    // physics
+    
           // Light green when sensors active
         
        orientationX = rotationX; // front/back
@@ -115,17 +109,16 @@ function draw()
       velY *= -0.8;
       posY = constrain(posY, 0, height);
     }
+  }
+
+    
 
         imageMode(CENTER);
-        image(imgGif, posX, posY, 50, 50);
-    } 
-    else 
-    {
-           background(0, 0, 0);
-    textAlign(CENTER, CENTER);
-    text("Tap to enable motion sensors", width / 2, height / 2);
+        blendMode(HARD_LIGHT);
 
-    }
+        image(imgGif, posX, posY, 75, 75);
+    
+
 }
 
 // ==============================================
@@ -135,12 +128,9 @@ function draw()
 
 function touchStarted() 
 {
-    // Permission handling is done by enableGyroTap
-    return false;
-}
+  paused = !paused;
+  if (paused) saveCanvas('myTiltCanvas', 'png');
+  return false; 
 
-function touchEnded() 
-{
-    return false;
 }
 
