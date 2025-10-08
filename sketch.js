@@ -24,6 +24,17 @@ let posX = 0;
 let posY = 0;
 let velX = 0;
 let velY = 0;
+
+let paused = false;
+
+function touchStarted() {
+  paused = !paused;             // toggle pause/resume
+  if (paused) {
+    saveCanvas('myTiltCanvas', 'png'); // save when paused
+  }
+  return false; // prevent scrolling
+
+}
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
@@ -70,9 +81,10 @@ function draw()
     // Clear the screen
     // background(240, 240, 240);
     
-    
+      if (!window.sensorsEnabled) return;
+
     // Check if sensors are working
-    if (window.sensorsEnabled) 
+    if (!paused) 
     {
           // Light green when sensors active
         
@@ -80,8 +92,8 @@ function draw()
     orientationY = rotationY; // left/right
 
     // Convert tilt to acceleration (scaled down)
-    let ax = orientationY * 0.05;
-    let ay = orientationX * 0.05;
+    let ax = orientationY * 0.01;
+    let ay = orientationX * 0.01;
 
     // Integrate velocity and position
     velX += ax;
@@ -105,7 +117,7 @@ function draw()
     }
 
         imageMode(CENTER);
-        image(imgGif, posX, posY, 75, 75);
+        image(imgGif, posX, posY, 50, 50);
     } 
     else 
     {
