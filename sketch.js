@@ -20,6 +20,8 @@ let orientationZ = 0;  // Rotation around Z axis (device rotation)
 let locationX;
 let locationY;
 let imgGif;
+let velX;
+let velY;
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
