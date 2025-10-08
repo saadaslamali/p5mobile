@@ -48,7 +48,7 @@ function setup()
 function draw() 
 {
     // Clear the screen
-    background(240, 240, 240);
+    // background(240, 240, 240);
 
 
 
@@ -81,15 +81,14 @@ function draw()
         // This would limit the X rotation to between -90 and 90 degrees
         // Useful for mapping sensor values to specific ranges for animations or controls
         // Learn more: https://p5js.org/reference/p5/constrain/
-
-            if (posX < 0 || posX > width) {
-                velX *= -0.8;
-                posX = constrain(posX, 0, width);
-                }
-                if (posY < 0 || posY > height) {
-                velY *= -0.8;
-                posY = constrain(posY, 0, height);
-                }
+    if (posX < 0 || posX > width) {
+      velX *= -0.8;
+      posX = constrain(posX, 0, width);
+    }
+    if (posY < 0 || posY > height) {
+      velY *= -0.8;
+      posY = constrain(posY, 0, height);
+    }
 
                     imageMode(CENTER);
         imgGif.resize(40, 80)
