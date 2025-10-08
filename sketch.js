@@ -27,7 +27,6 @@ let velY = 0;
 let paused = false;
 let gifRot = 0; // rotation of the GIF
 
-
 let blendModesList;
 
 let currentBlendMode;
@@ -40,7 +39,7 @@ let selected = false;
 // ==============================================
 
 function preload(){
-       imgGif = loadImage("gifb.gif");
+       imgGif = loadImage("gifc.gif");
 
 }
 function setup() 
@@ -152,6 +151,9 @@ function draw()
 
 function touchStarted() 
 {
+ /* if (!selected){
+
+  }*/
   paused = true;
   return false; 
 
