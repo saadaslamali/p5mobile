@@ -63,7 +63,7 @@ function setup()
 function draw() 
 {
     // Clear the screen
-    background(240, 240, 240);
+    // background(240, 240, 240);
     
 
     
