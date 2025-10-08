@@ -26,10 +26,6 @@ let imgGif;
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
 
-function preload(){
-       imgGif = loadImage("gifa.gif");
-
-}
 function setup() 
 {
     // Create a canvas that fills the entire screen
