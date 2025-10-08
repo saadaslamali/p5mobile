@@ -93,9 +93,7 @@ function draw()
     return;
   }
 
-    if (touchIsDown) {
-    angle += 4; // degrees per frame
-  }
+   
     if (!paused) {
     // physics
     
@@ -128,6 +126,10 @@ function draw()
       velY *= -0.8;
       posY = constrain(posY, 0, height);
     }
+  }
+  else {
+        angle += 4; // degrees per frame
+
   }
 
     
