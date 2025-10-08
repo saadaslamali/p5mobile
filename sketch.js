@@ -140,8 +140,8 @@ function draw()
 function touchStarted() 
 {
   paused = !paused;
+  currentBlendMode = random(blendModesList);
   return false; 
-    currentBlendMode = random(blendModesList);
 
 
 }
