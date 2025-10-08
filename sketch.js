@@ -20,10 +20,10 @@ let orientationZ = 0;  // Rotation around Z axis (device rotation)
 let locationX;
 let locationY;
 let imgGif;
-let velX;
-let velY;
-let posX;
-let posY;
+let posX = 0;
+let posY = 0;
+let velX = 0;
+let velY = 0;
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
@@ -52,8 +52,10 @@ function setup()
     // Set text properties
     textAlign(CENTER, CENTER);
     textSize(32);
-    posX = windowWidth / 2;
-    posY = windowHeight / 2;
+    posX = width / 2;
+    posY = height / 2;
+      imgGif.resize(80, 80);
+
     
 
 }
@@ -100,6 +102,8 @@ function draw()
       velY *= -0.8;
       posY = constrain(posY, 0, windowHeight);
     }
+
+        imageMode(CENTER);
         image(imgGif, orientationX, orientationY);
     } 
     else 
