@@ -16,6 +16,8 @@
 let orientationX = 0;  // Rotation around X axis (front/back tilt)
 let orientationY = 0;  // Rotation around Y axis (left/right tilt)
 let orientationZ = 0;  // Rotation around Z axis (device rotation)
+let locationX;
+let locationY;
 let imgGif;
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
@@ -67,7 +69,10 @@ function draw()
         // Update orientation values from device sensors ONLY when enabled
         orientationX = rotationX;
         orientationY = rotationY;
-        orientationZ = rotationZ;
+        // orientationZ = rotationZ;
+
+        locationX += orientationX;
+        locationY += orientationY;
         
         // NOTE: You can use constrain() to keep values within a specific range
         // Example: orientationX = constrain(rotationX, -90, 90);
@@ -75,10 +80,10 @@ function draw()
         // Useful for mapping sensor values to specific ranges for animations or controls
         // Learn more: https://p5js.org/reference/p5/constrain/
 
-        image(imgGif, rotationX, rotationY);
+        image(imgGif, orientationX, orientationY);
         imgGif.resize(30, 80)
     } 
-    else 
+    else l
     {
         // Instructions to enable sensors
 
