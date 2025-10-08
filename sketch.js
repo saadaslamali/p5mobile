@@ -94,18 +94,18 @@ function draw()
     posY += velY;
 
     // Bounce at edges
-    if (posX < 0 || posX > windowWidth) {
+    if (posX < 0 || posX > width) {
       velX *= -0.8;
-      posX = constrain(posX, 0, windowWidth);
+      posX = constrain(posX, 0, width);
     }
-    if (posY < 0 || posY > windowHeight) {
+    if (posY < 0 || posY > height) {
       velY *= -0.8;
-      posY = constrain(posY, 0, windowHeight);
+      posY = constrain(posY, 0, height);
     }
 
         imageMode(CENTER);
-          imgGif.resize(80, 80);
-        image(imgGif, orientationX, orientationY);
+          imgGif.resize(80, 160);
+        image(imgGif, posX, posY);
     } 
     else 
     {
