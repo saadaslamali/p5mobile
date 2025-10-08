@@ -22,6 +22,8 @@ let locationY;
 let imgGif;
 let velX;
 let velY;
+let posX;
+let posY;
 // ==============================================
 // SETUP FUNCTION - Runs once when page loads
 // ==============================================
