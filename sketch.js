@@ -62,8 +62,7 @@ function setup()
     posY = height / 2;
       background(0, 0, 0);
       blendModesList =  [
-  BLEND, ADD, DARKEST, LIGHTEST, DIFFERENCE,
-  MULTIPLY, EXCLUSION, SCREEN, REPLACE, OVERLAY
+  BLEND, EXCLUSION, OVERLAY
 ];
         currentBlendMode = random(blendModesList); // choose initial blend mode
 
@@ -140,10 +139,15 @@ function draw()
 
 function touchStarted() 
 {
-  paused = !paused;
+  paused = true;
   currentBlendMode = random(blendModesList);
   return false; 
 
 
 }
 
+
+function touchEnded() {
+  paused = false;
+  return false; 
+}
