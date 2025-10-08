@@ -105,6 +105,7 @@ function draw()
     }
 
         imageMode(CENTER);
+          blendMode(HARD_LIGHT);
         image(imgGif, posX, posY);
     } 
     else 
