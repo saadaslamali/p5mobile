@@ -48,7 +48,7 @@ function setup()
 function draw() 
 {
     // Clear the screen
-    // background(240, 240, 240);
+    background(240, 240, 240);
 
 
 
@@ -91,8 +91,10 @@ function draw()
                 posY = constrain(posY, 0, height);
                 }
 
-        image(imgGif, orientationX, orientationY);
-        imgGif.resize(30, 80)
+                    imageMode(CENTER);
+        imgGif.resize(40, 80)
+
+        image(imgGif, posX, posY);
     } 
     else 
     {
